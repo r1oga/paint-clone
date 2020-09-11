@@ -6,9 +6,28 @@
 
 body {
   margin: 0;
-  background-color: rgb(29, 28, 28);
+  background-color: rgb(88, 88, 88);
   font-family: 'VT323', monospace;
   overflow: hidden;
+}
+
+footer {
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+  z-index: 200;
+}
+
+a {
+  color: indianred;
+}
+
+a:hover {
+  filter: brightness(120%);
 }
 
 .top-bar {
@@ -74,7 +93,7 @@ body {
 
 .brush {
   height: 49px;
-  width: 345px;
+  width: 380px;
 }
 
 .brush > * {
@@ -124,21 +143,19 @@ input[type='color']:hover {
   appearance: none;
   width: 10px;
   height: 10px;
-  background: rgb(47, 47, 47);
+  background: rgb(0, 0, 0);
 }
 
 .slider::-moz-range-thumb {
   width: 10px;
   height: 10px;
-  background: rgb(47, 47, 47);
+  background: rgb(0, 0, 0);
 }
 
 /* JS Color */
 .jscolor {
-  border-style: solid;
-  border-radius: 5px;
   height: 35px;
-  width: 120px;
+  width: 100px;
   margin-left: 3px;
   text-align: center;
   cursor: pointer;
@@ -147,9 +164,9 @@ input[type='color']:hover {
 
 /* Canvas */
 canvas#canvas {
-  /* background-color: rgb(177, 177, 177); */
+  background-color: rgb(177, 177, 177);
   position: absolute;
-  top: 50px;
+  top: 59px;
   cursor: crosshair;
   z-index: 10;
 }
@@ -160,12 +177,12 @@ canvas#canvas {
 }
 
 /* Media Query: Mobile Devices */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 920px) {
   .mobile-message {
     position: absolute;
     height: 100vh;
     width: 100%;
-    /* background-color: rgb(0, 0, 0); */
+    background-color: rgba(47 47 47);
     color: whitesmoke;
     display: flex;
     justify-content: center;
